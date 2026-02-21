@@ -90,7 +90,8 @@ export function useNavigate() {
   return context.navigate;
 }
 
-export function Route(_props: { path: string; element: ReactElement }) {
+export function Route(props: { path: string; element: ReactElement }) {
+  void props;
   return null;
 }
 
