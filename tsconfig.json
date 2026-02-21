@@ -18,7 +18,8 @@
     /* Path mapping */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "react-router-dom": ["src/router/react-router-dom.tsx"]
     },
 
     /* Linting */
