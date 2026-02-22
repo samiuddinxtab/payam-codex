@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import publicationsData from '../../content/ur/publications.json';
+
+const { quranSection, materials } = publicationsData;
+---
+
+<Layout 
+  title="نشرواشاعت - پیام سیرت ٹرسٹ"
+  description="پیام سیرت ٹرسٹ کے قرآن تقسیم پروگرام اور اسلامی اشعات دریافت کریں۔"
+  lang="ur"
+>
+  <Header lang="ur" currentPage="publications" />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-16 lg:py-24 geo-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4 font-urdu">نشرواشاعت</h1>
+          <p class="text-2xl text-gold">Publications</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quran Distribution -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center" dir="rtl">
+          <div class="text-right">
+            <h2 class="text-3xl font-bold text-primary mb-2 font-urdu">{quranSection.urduTitle}</h2>
+            <p class="text-xl text-gray-600 mb-6">{quranSection.title}</p>
+            <p class="text-gray-600 mb-6 font-urdu leading-loose">{quranSection.urduDescription}</p>
+            <p class="text-gray-500 mb-6">{quranSection.description}</p>
+            
+            <ul class="space-y-3 mb-8 text-right">
+              {quranSection.features.map(feature => (
+                <li class="flex items-start gap-3 justify-end">
+                  <div>
+                    <span class="text-gray-700 font-urdu">{feature.urduText}</span>
+                    <span class="block text-sm text-gray-500">{feature.text}</span>
+                  </div>
+                  <span class="text-gold text-lg flex-shrink-0">✓</span>
+                </li>
+              ))}
+            </ul>
+            
+            <div class="bg-cream rounded-xl p-6 text-right">
+              <h3 class="font-semibold text-primary mb-2 font-urdu">{quranSection.urduCtaTitle}</h3>
+              <p class="text-sm text-primary mb-3">{quranSection.ctaTitle}</p>
+              <p class="text-gray-600 text-sm mb-4 font-urdu">{quranSection.urduCtaText}</p>
+              <p class="text-gray-500 text-sm">{quranSection.ctaText}</p>
+              <a href="/ur/support/" class="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-urdu">
+                کفالت کریں
+              </a>
+            </div>
+          </div>
+          
+          <div class="bg-cream rounded-2xl p-8 text-center">
+            <div class="w-32 h-40 bg-primary/10 rounded-lg mx-auto mb-6 flex items-center justify-center">
+              <span class="text-6xl">☪</span>
+            </div>
+            <p class="text-gray-500 italic font-urdu">قرآن تقسیم پروگرام</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational Materials -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-primary mb-2 font-urdu">تعلیمی مواد</h2>
+          <p class="text-lg text-gray-600">Educational Materials</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6" dir="rtl">
+          {materials.map(material => (
+            <div class="bg-white rounded-xl p-6 shadow-sm card-hover text-right">
+              <h3 class="text-lg font-semibold text-primary mb-2 font-urdu">{material.urduName}</h3>
+              <p class="text-sm text-primary mb-4">{material.name}</p>
+              <p class="text-gray-600 text-sm mb-3 font-urdu leading-relaxed">{material.urduDescription}</p>
+              <p class="text-gray-500 text-sm">{material.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer lang="ur" />
+</Layout>
