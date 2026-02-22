@@ -1,37 +1,27 @@
 {
   "quranSection": {
-    "title": "Quran Distribution",
-    "urduTitle": "قرآن کی تقسیم",
-    "description": "Our publications department manages the printing and distribution of the Holy Quran across the community. We ensure that every student and household has access to a quality copy of the Quran for learning and recitation.",
-    "urduDescription": "ہمارا شعبہ نشرواشاعت معاشرے میں قرآن پاک کی طباعت اور تقسیم کا انتظام کرتا ہے۔ ہم اس بات کو یقینی بناتے ہیں کہ ہر طالب علم اور گھرانے کو تعلیم اور تلاوت کے لیے قرآن کی معیاری نسخے تک رسائی حاصل ہو۔",
+    "title": "قرآن کی تقسیم",
+    "description": "ہمارا شعبہ نشرواشاعت معاشرے میں قرآن پاک کی طباعت اور تقسیم کا انتظام کرتا ہے۔ ہم اس بات کو یقینی بناتے ہیں کہ ہر طالب علم اور گھرانے کو تعلیم اور تلاوت کے لیے قرآن کی معیاری نسخے تک رسائی حاصل ہو۔",
     "features": [
-      { "text": "High-quality Quran printing with clear typography", "urduText": "واضح خطاطی کے ساتھ اعلیٰ معیار کی قرآن کی طباعت" },
-      { "text": "Free distribution to maktab students", "urduText": "مکتب کے طلبہ کو مفت تقسیم" },
-      { "text": "Community-wide Quran access programs", "urduText": "معاشرے میں قرآن تک رسائی کے پروگرام" }
+      { "text": "واضح خطاطی کے ساتھ اعلیٰ معیار کی قرآن کی طباعت" },
+      { "text": "مکتب کے طلبہ کو مفت تقسیم" },
+      { "text": "معاشرے میں قرآن تک رسائی کے پروگرام" }
     ],
-    "ctaTitle": "Sponsor Quran Printing",
-    "urduCtaTitle": "قرآن کی طباعت کی کفالت",
-    "ctaText": "Your contribution helps print and distribute Quran copies to students and families in need.",
-    "urduCtaText": "آپ کا عطیہ ضرورت مند طلبہ اور خاندانوں کو قرآن کی کاپیاں چھاپنے اور تقسیم کرنے میں مدد کرتا ہے۔"
+    "ctaTitle": "قرآن کی طباعت کی کفالت",
+    "ctaText": "آپ کا عطیہ ضرورت مند طلبہ اور خاندانوں کو قرآن کی کاپیاں چھاپنے اور تقسیم کرنے میں مدد کرتا ہے۔"
   },
   "materials": [
     {
-      "name": "Islamic Textbooks",
-      "urduName": "اسلامی درسی کتب",
-      "description": "Carefully curated textbooks covering Islamic studies, Quran, Hadith, and Fiqh for different age groups and learning levels.",
-      "urduDescription": "مختلف عمر کے گروپوں اور تعلیمی سطحوں کے لیے اسلامی مطالعات، قرآن، حدیث اور فقہ پر مشتمل احتیاط سے مرتب کی گئی درسی کتب۔"
+      "name": "اسلامی درسی کتب",
+      "description": "مختلف عمر کے گروپوں اور تعلیمی سطحوں کے لیے اسلامی مطالعات، قرآن، حدیث اور فقہ پر مشتمل احتیاط سے مرتب کی گئی درسی کتب۔"
     },
     {
-      "name": "Student Guides",
-      "urduName": "طلبہ کے رہنما",
-      "description": "Student workbooks, activity guides, and reference materials supporting the structured curriculum in our maktabs.",
-      "urduDescription": "ہمارے مکاتب میں منظم نصاب کی مدد کرنے والی طلبہ کی ورک بکس، سرگرمی کے رہنما اور حوالہ جاتی مواد۔"
+      "name": "طلبہ کے رہنما",
+      "description": "ہمارے مکاتب میں منظم نصاب کی مدد کرنے والی طلبہ کی ورک بکس، سرگرمی کے رہنما اور حوالہ جاتی مواد۔"
     },
     {
-      "name": "Teaching Manuals",
-      "urduName": "تدریسی کتابچے",
-      "description": "Comprehensive teaching manuals for instructors with lesson plans, methodology guides, and assessment tools.",
-      "urduDescription": "انسٹرکٹرز کے لیے سبق کے منصوبے، طریقہ کار کے رہنما اور تشخیصی ٹولز کے ساتھ جامع تدریسی کتابچے۔"
+      "name": "تدریسی کتابچے",
+      "description": "انسٹرکٹرز کے لیے سبق کے منصوبے، طریقہ کار کے رہنما اور تشخیصی ٹولز کے ساتھ جامع تدریسی کتابچے۔"
     }
   ]
 }

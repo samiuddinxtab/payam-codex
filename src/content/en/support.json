@@ -1,83 +1,60 @@
 {
   "heroTitle": "Support Islamic Education Today",
-  "urduHeroTitle": "آج اسلامی تعلیم کی مدد کریں",
   "heroText": "Your generous contribution helps us educate thousands of children, support teachers, and spread Islamic knowledge across the community.",
-  "urduHeroText": "آپ کا فیاضانہ عطیہ ہمیں ہزاروں بچوں کو تعلیم دینے، اساتذہ کی مدد کرنے اور معاشرے میں اسلامی علم پھیلانے میں مدد کرتا ہے۔",
   "upiTitle": "Quick Donate",
-  "urduUpiTitle": "فوری عطیہ",
   "upiText": "Scan QR code to donate instantly",
-  "urduUpiText": "فوری عطیہ کے لیے QR کوڈ اسکین کریں",
   "bankNote": "Contact us for bank transfer details or other payment methods.",
-  "urduBankNote": "بینک ٹرانسفر کی تفصیلات یا ادائیگی کے دیگر طریقوں کے لیے ہم سے رابطہ کریں۔",
   "tiersTitle": "Sponsorship Options",
-  "urduTiersTitle": "کفالت کے اختیارات",
   "tiersDescription": "Choose a sponsorship tier that suits you. Every contribution makes a difference.",
-  "urduTiersDescription": "اپنی سہولت کے مطابق کفالت کا درجہ منتخب کریں۔ ہر عطیہ فرق ڈالتا ہے۔",
   "monthlyLabel": "Monthly",
-  "urduMonthlyLabel": "ماہانہ",
   "yearlyLabel": "Yearly",
-  "urduYearlyLabel": "سالانہ",
   "mostImpactfulBadge": "MOST IMPACTFUL",
-  "urduMostImpactfulBadge": "سب سے اہم",
   "tiers": [
     {
       "name": "Sponsor a Teacher",
-      "urduName": "استاد کی کفالت",
       "monthly": "₹6,000",
       "yearly": "₹72,000",
       "description": "Support a teacher's monthly salary to keep maktab education running.",
-      "urduDescription": "مکتب کی تعلیم جاری رکھنے کے لیے استاد کی ماہانہ تنخواہ کی مدد کریں۔",
       "highlight": true
     },
     {
       "name": "Sponsor a Student",
-      "urduName": "طالب علم کی کفالت",
       "monthly": "₹500",
       "yearly": "₹6,000",
       "description": "Cover a student's monthly educational fees and learning materials.",
-      "urduDescription": "طالب علم کی ماہانہ تعلیمی فیس اور تعلیمی مواد کا خرچ ادا کریں۔",
       "highlight": false
     },
     {
       "name": "Book Printing (Tier 1)",
-      "urduName": "کتب کی طباعت (درجہ 1)",
       "monthly": "₹1,000",
       "yearly": "₹12,000",
       "description": "Sponsor printing of Islamic textbooks and student guides.",
-      "urduDescription": "اسلامی درسی کتب اور طلبہ کے رہنما چھاپنے کی کفالت کریں۔",
       "highlight": false
     },
     {
       "name": "Book Printing (Tier 2)",
-      "urduName": "کتب کی طباعت (درجہ 2)",
       "monthly": "₹5,000",
       "yearly": "₹60,000",
       "description": "Sponsor large-scale Quran printing and distribution programs.",
-      "urduDescription": "بڑے پیمانے پر قرآن کی طباعت اور تقسیم کے پروگراموں کی کفالت کریں۔",
       "highlight": false
     },
     {
       "name": "Administrative Support",
-      "urduName": "انتظامی مدد",
       "monthly": "Variable",
       "yearly": "Variable",
       "description": "Support Taleem Pro software operations, office costs, and management.",
-      "urduDescription": "تعلیم پرو سافٹ ویئر آپریشنز، دفتری اخراجات اور انتظام کی مدد کریں۔",
       "highlight": false
     }
   ],
   "impactTitle": "Your Impact",
-  "urduImpactTitle": "آپ کا اثر",
   "impactItems": [
-    { "text": "Educate children in Quran and Islamic studies", "urduText": "بچوں کو قرآن اور اسلامی مطالعات کی تعلیم دیں" },
-    { "text": "Support 200+ teachers across 150+ maktabs", "urduText": "150+ مکاتب میں 200+ اساتذہ کی مدد کریں" },
-    { "text": "Print and distribute Islamic books", "urduText": "اسلامی کتب چھاپیں اور تقسیم کریں" },
-    { "text": "Fund teacher training programs", "urduText": "اساتذہ کی تربیت کے پروگراموں کی مالی مدد کریں" },
-    { "text": "Maintain digital management systems", "urduText": "ڈیجیٹل انتظامی نظام کو برقرار رکھیں" },
-    { "text": "Support community welfare initiatives", "urduText": "فلاح عامہ کے اقدامات کی مدد کریں" }
+    { "text": "Educate children in Quran and Islamic studies" },
+    { "text": "Support 200+ teachers across 150+ maktabs" },
+    { "text": "Print and distribute Islamic books" },
+    { "text": "Fund teacher training programs" },
+    { "text": "Maintain digital management systems" },
+    { "text": "Support community welfare initiatives" }
   ],
   "contactTitle": "Contact for Donation",
-  "urduContactTitle": "عطیہ کے لیے رابطہ",
-  "contactText": "Reach out to us via phone or WhatsApp to make your contribution.",
-  "urduContactText": "اپنا عطیہ دینے کے لیے فون یا واٹس ایپ کے ذریعے ہم سے رابطہ کریں۔"
+  "contactText": "Reach out to us via phone or WhatsApp to make your contribution."
 }

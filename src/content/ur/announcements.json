@@ -1,22 +1,17 @@
 {
-  "title": "Announcements",
-  "urduTitle": "اعلانات",
+  "title": "اعلانات",
   "items": [
     {
       "id": "ramadan-2025",
-      "title": "Ramadan Programs 2025",
-      "urduTitle": "رمضان پروگرام 2025",
+      "title": "رمضان پروگرام 2025",
       "date": "2025-02-15",
-      "text": "Special Quran classes and Iftar arrangements for students during Ramadan. Contact your local maktab for details.",
-      "urduText": "رمضان کے دوران طلبہ کے لیے خصوصی قرآن کلاسز اور افطار کے انتظامات۔ تفصیلات کے لیے اپنے مقامی مکتب سے رابطہ کریں۔"
+      "text": "رمضان کے دوران طلبہ کے لیے خصوصی قرآن کلاسز اور افطار کے انتظامات۔ تفصیلات کے لیے اپنے مقامی مکتب سے رابطہ کریں۔"
     },
     {
       "id": "admissions-open",
-      "title": "New Admissions Open",
-      "urduTitle": "نئے داخلے کھلے ہیں",
+      "title": "نئے داخلے کھلے ہیں",
       "date": "2025-01-01",
-      "text": "Admissions are now open for the new academic year. Visit your nearest maktab or contact us for enrollment.",
-      "urduText": "نئے تعلیمی سال کے لیے داخلے کھلے ہیں۔ داخلہ کے لیے اپنے قریب ترین مکتب کا دورہ کریں یا ہم سے رابطہ کریں۔"
+      "text": "نئے تعلیمی سال کے لیے داخلے کھلے ہیں۔ داخلہ کے لیے اپنے قریب ترین مکتب کا دورہ کریں یا ہم سے رابطہ کریں۔"
     }
   ]
 }

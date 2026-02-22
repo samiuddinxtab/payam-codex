@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import publicationsData from '../../content/en/publications.json';
+import publicationsDataUr from '../../content/ur/publications.json';
 
 const { quranSection, materials } = publicationsData;
 ---
@@ -31,17 +32,17 @@ const { quranSection, materials } = publicationsData;
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 class="text-3xl font-bold text-primary mb-2">{quranSection.title}</h2>
-            <p class="text-xl font-urdu text-gray-600 mb-6">{quranSection.urduTitle}</p>
+            <p class="text-xl font-urdu text-gray-600 mb-6">{publicationsDataUr.quranSection.title}</p>
             <p class="text-gray-600 mb-6">{quranSection.description}</p>
-            <p class="text-gray-500 font-urdu leading-loose mb-6">{quranSection.urduDescription}</p>
+            <p class="text-gray-500 font-urdu leading-loose mb-6">{publicationsDataUr.quranSection.description}</p>
             
             <ul class="space-y-3 mb-8">
-              {quranSection.features.map(feature => (
+              {quranSection.features.map((feature, index) => (
                 <li class="flex items-start gap-3">
                   <span class="text-gold text-lg">✓</span>
                   <div>
                     <span class="text-gray-700">{feature.text}</span>
-                    <span class="block text-sm font-urdu text-gray-500">{feature.urduText}</span>
+                    <span class="block text-sm font-urdu text-gray-500">{publicationsDataUr.quranSection.features[index].text}</span>
                   </div>
                 </li>
               ))}
@@ -49,9 +50,9 @@ const { quranSection, materials } = publicationsData;
             
             <div class="bg-cream rounded-xl p-6">
               <h3 class="font-semibold text-primary mb-2">{quranSection.ctaTitle}</h3>
-              <p class="text-sm font-urdu text-primary mb-3">{quranSection.urduCtaTitle}</p>
+              <p class="text-sm font-urdu text-primary mb-3">{publicationsDataUr.quranSection.ctaTitle}</p>
               <p class="text-gray-600 text-sm mb-4">{quranSection.ctaText}</p>
-              <p class="text-gray-500 text-sm font-urdu">{quranSection.urduCtaText}</p>
+              <p class="text-gray-500 text-sm font-urdu">{publicationsDataUr.quranSection.ctaText}</p>
               <a href="/en/support/" class="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
                 Sponsor Now
               </a>
@@ -77,12 +78,12 @@ const { quranSection, materials } = publicationsData;
         </div>
         
         <div class="grid md:grid-cols-3 gap-6">
-          {materials.map(material => (
+          {materials.map((material, index) => (
             <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
               <h3 class="text-lg font-semibold text-primary mb-2">{material.name}</h3>
-              <p class="text-sm font-urdu text-primary mb-4">{material.urduName}</p>
+              <p class="text-sm font-urdu text-primary mb-4">{publicationsDataUr.materials[index].name}</p>
               <p class="text-gray-600 text-sm mb-3">{material.description}</p>
-              <p class="text-gray-500 text-sm font-urdu leading-relaxed">{material.urduDescription}</p>
+              <p class="text-gray-500 text-sm font-urdu leading-relaxed">{publicationsDataUr.materials[index].description}</p>
             </div>
           ))}
         </div>

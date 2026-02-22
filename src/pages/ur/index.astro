@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import homeData from '../../content/ur/home.json';
+import homeDataEn from '../../content/en/home.json';
 
 const { hero, mission, stats, departmentsPreview } = homeData;
 ---
@@ -22,18 +23,18 @@ const { hero, mission, stats, departmentsPreview } = homeData;
           <div class="flex items-center justify-center gap-3 mb-6">
             <span class="text-6xl">☪</span>
           </div>
-          <h1 class="text-4xl lg:text-6xl font-bold mb-4 font-urdu fade-in">{hero.urduTitle}</h1>
-          <p class="text-2xl lg:text-3xl mb-4 text-gold fade-in-d1">{hero.title}</p>
-          <p class="text-xl text-white/90 mb-2 font-urdu fade-in-d2">{hero.urduSubtitle}</p>
-          <p class="text-lg text-white/80 mb-6 fade-in-d2">{hero.subtitle}</p>
+          <h1 class="text-4xl lg:text-6xl font-bold mb-4 font-urdu fade-in">{hero.title}</h1>
+          <p class="text-2xl lg:text-3xl mb-4 text-gold fade-in-d1">{homeDataEn.hero.title}</p>
+          <p class="text-xl text-white/90 mb-2 font-urdu fade-in-d2">{hero.subtitle}</p>
+          <p class="text-lg text-white/80 mb-6 fade-in-d2">{homeDataEn.hero.subtitle}</p>
           <p class="text-white/70 mb-8 fade-in-d3">📍 {hero.location}</p>
           
           <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-d3">
             <a href="/ur/departments/" class="px-8 py-4 bg-gold text-primary-dark font-semibold rounded-lg hover:bg-gold-light transition-colors shadow-lg font-urdu">
-              {hero.ctaPrimaryUrdu}
+              {hero.ctaPrimary}
             </a>
             <a href="/ur/support/" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors border border-white/30 font-urdu">
-              {hero.ctaSecondaryUrdu}
+              {hero.ctaSecondary}
             </a>
           </div>
         </div>
@@ -44,11 +45,11 @@ const { hero, mission, stats, departmentsPreview } = homeData;
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map(stat => (
+          {stats.map((stat, i) => (
             <div class="text-center">
               <div class="text-4xl lg:text-5xl font-bold text-primary mb-2">{stat.value}</div>
-              <div class="text-gray-600 font-urdu">{stat.urduLabel}</div>
-              <div class="text-sm text-gray-500">{stat.label}</div>
+              <div class="text-gray-600 font-urdu">{stat.label}</div>
+              <div class="text-sm text-gray-500">{homeDataEn.stats[i].label}</div>
             </div>
           ))}
         </div>
@@ -66,10 +67,10 @@ const { hero, mission, stats, departmentsPreview } = homeData;
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {mission.map((item, index) => (
             <div class={`bg-white rounded-xl p-6 shadow-sm card-hover ${index % 2 === 0 ? 'fade-in' : 'fade-in-d1'}`}>
-              <h3 class="text-lg font-semibold text-primary mb-2 font-urdu">{item.urduTitle}</h3>
-              <p class="text-sm text-primary mb-3">{item.title}</p>
-              <p class="text-gray-600 text-sm mb-3 font-urdu leading-relaxed">{item.urduText}</p>
-              <p class="text-gray-500 text-sm">{item.text}</p>
+              <h3 class="text-lg font-semibold text-primary mb-2 font-urdu">{item.title}</h3>
+              <p class="text-sm text-primary mb-3">{homeDataEn.mission[index].title}</p>
+              <p class="text-gray-600 text-sm mb-3 font-urdu leading-relaxed">{item.text}</p>
+              <p class="text-gray-500 text-sm">{homeDataEn.mission[index].text}</p>
             </div>
           ))}
         </div>
@@ -85,13 +86,13 @@ const { hero, mission, stats, departmentsPreview } = homeData;
         </div>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {departmentsPreview.map(dept => (
+          {departmentsPreview.map((dept, i) => (
             <a 
               href="/ur/departments/" 
               class="bg-cream rounded-lg p-4 text-center hover:bg-cream-dark transition-colors group"
             >
-              <h3 class="font-semibold text-primary group-hover:text-primary-dark transition-colors font-urdu">{dept.urduName}</h3>
-              <p class="text-sm text-gray-600 mt-1">{dept.name}</p>
+              <h3 class="font-semibold text-primary group-hover:text-primary-dark transition-colors font-urdu">{dept.name}</h3>
+              <p class="text-sm text-gray-600 mt-1">{homeDataEn.departmentsPreview[i].name}</p>
             </a>
           ))}
         </div>

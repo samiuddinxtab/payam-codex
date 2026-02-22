@@ -1,37 +1,16 @@
 {
-  "name": "react-vite-tailwind",
-  "private": true,
-  "version": "0.0.0",
+  "name": "payam-astro",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "clsx": "2.1.1",
-    "lucide-react": "^0.575.0",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "tailwind-merge": "3.4.0"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.0",
-    "@tailwindcss/vite": "4.1.17",
-    "@types/node": "^22.0.0",
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "5.1.1",
-    "eslint": "^9.39.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "globals": "^16.5.0",
-    "tailwindcss": "4.1.17",
-    "typescript": "5.9.3",
-    "typescript-eslint": "^8.46.2",
-    "vite": "7.2.4",
-    "vite-plugin-singlefile": "2.3.0"
+    "astro": "^5.0.0",
+    "@astrojs/tailwind": "^6.0.0"
   }
 }

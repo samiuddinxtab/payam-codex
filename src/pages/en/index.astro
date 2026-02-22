@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import homeData from '../../content/en/home.json';
+import homeDataUr from '../../content/ur/home.json';
 
 const { hero, mission, stats, departmentsPreview } = homeData;
 ---
@@ -23,9 +24,9 @@ const { hero, mission, stats, departmentsPreview } = homeData;
             <span class="text-6xl">☪</span>
           </div>
           <h1 class="text-4xl lg:text-6xl font-bold mb-4 fade-in">{hero.title}</h1>
-          <p class="text-2xl lg:text-3xl font-urdu mb-4 text-gold fade-in-d1">{hero.urduTitle}</p>
+          <p class="text-2xl lg:text-3xl font-urdu mb-4 text-gold fade-in-d1">{homeDataUr.hero.title}</p>
           <p class="text-xl text-white/90 mb-2 fade-in-d2">{hero.subtitle}</p>
-          <p class="text-lg font-urdu text-white/80 mb-6 fade-in-d2">{hero.urduSubtitle}</p>
+          <p class="text-lg font-urdu text-white/80 mb-6 fade-in-d2">{homeDataUr.hero.subtitle}</p>
           <p class="text-white/70 mb-8 fade-in-d3">📍 {hero.location}</p>
           
           <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-d3">
@@ -44,11 +45,11 @@ const { hero, mission, stats, departmentsPreview } = homeData;
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map(stat => (
+          {stats.map((stat, i) => (
             <div class="text-center">
               <div class="text-4xl lg:text-5xl font-bold text-primary mb-2">{stat.value}</div>
               <div class="text-gray-600">{stat.label}</div>
-              <div class="text-sm text-gray-500 font-urdu">{stat.urduLabel}</div>
+              <div class="text-sm text-gray-500 font-urdu">{homeDataUr.stats[i].label}</div>
             </div>
           ))}
         </div>
@@ -67,9 +68,9 @@ const { hero, mission, stats, departmentsPreview } = homeData;
           {mission.map((item, index) => (
             <div class={`bg-white rounded-xl p-6 shadow-sm card-hover ${index % 2 === 0 ? 'fade-in' : 'fade-in-d1'}`}>
               <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
-              <p class="text-sm font-urdu text-primary mb-3">{item.urduTitle}</p>
+              <p class="text-sm font-urdu text-primary mb-3">{homeDataUr.mission[index].title}</p>
               <p class="text-gray-600 text-sm mb-3">{item.text}</p>
-              <p class="text-gray-500 text-sm font-urdu leading-relaxed">{item.urduText}</p>
+              <p class="text-gray-500 text-sm font-urdu leading-relaxed">{homeDataUr.mission[index].text}</p>
             </div>
           ))}
         </div>
@@ -85,13 +86,13 @@ const { hero, mission, stats, departmentsPreview } = homeData;
         </div>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {departmentsPreview.map(dept => (
+          {departmentsPreview.map((dept, i) => (
             <a 
               href="/en/departments/" 
               class="bg-cream rounded-lg p-4 text-center hover:bg-cream-dark transition-colors group"
             >
               <h3 class="font-semibold text-primary group-hover:text-primary-dark transition-colors">{dept.name}</h3>
-              <p class="text-sm font-urdu text-gray-600 mt-1">{dept.urduName}</p>
+              <p class="text-sm font-urdu text-gray-600 mt-1">{homeDataUr.departmentsPreview[i].name}</p>
             </a>
           ))}
         </div>

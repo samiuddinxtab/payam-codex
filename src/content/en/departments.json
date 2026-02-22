@@ -3,106 +3,66 @@
     {
       "id": "maktab",
       "name": "Maktab Department",
-      "urduName": "شعبہ مکاتب",
       "purpose": "Providing basic Quran education and foundational Islamic teaching across an extensive network of maktabs throughout the region.",
-      "urduPurpose": "پورے خطے میں مکاتب کے وسیع نیٹ ورک کے ذریعے بنیادی قرآنی تعلیم اور اسلامی تعلیم فراہم کرنا۔",
       "activities": ["Basic Quran education", "Foundational Islamic teaching", "Student enrollment & tracking", "Teacher deployment & management"],
-      "urduActivities": ["بنیادی قرآنی تعلیم", "بنیادی اسلامی تعلیم", "طلبہ کا اندراج اور نگرانی", "اساتذہ کی تعیناتی اور انتظام"],
       "impact": "150+ maktabs operational with thousands of students enrolled across the region.",
-      "urduImpact": "پورے خطے میں 150+ مکاتب فعال ہیں جن میں ہزاروں طلبہ کا اندراج ہے۔",
-      "support": "Teacher salaries, learning materials, maktab infrastructure.",
-      "urduSupport": "اساتذہ کی تنخواہیں، تعلیمی مواد، مکاتب کا بنیادی ڈھانچہ۔"
+      "support": "Teacher salaries, learning materials, maktab infrastructure."
     },
     {
       "id": "madrasa",
       "name": "Madrasa Department",
-      "urduName": "شعبہ مدارس",
       "purpose": "Supporting city madrasas with expanded Quran education programs and structured Islamic studies curriculum.",
-      "urduPurpose": "شہری مدارس کی مدد وسیع قرآنی تعلیمی پروگراموں اور منظم اسلامی مطالعات کے نصاب کے ساتھ۔",
       "activities": ["City madrasa support", "Quran education expansion", "Islamic studies programs", "Curriculum development"],
-      "urduActivities": ["شہری مدارس کی مدد", "قرآنی تعلیم کی توسیع", "اسلامی مطالعات کے پروگرام", "نصاب کی ترقی"],
       "impact": "Multiple madrasas supported with enhanced educational programs.",
-      "urduImpact": "متعدد مدارس کو بہتر تعلیمی پروگراموں کے ساتھ مدد فراہم کی گئی۔",
-      "support": "Madrasa operations, teacher support, educational resources.",
-      "urduSupport": "مدارس کا انتظام، اساتذہ کی مدد، تعلیمی وسائل۔"
+      "support": "Madrasa operations, teacher support, educational resources."
     },
     {
       "id": "courses",
       "name": "Courses Department",
-      "urduName": "شعبہ کورس",
       "purpose": "Organizing structured Islamic courses including the signature 40-day course covering core Islamic subjects.",
-      "urduPurpose": "منظم اسلامی کورسز کا اہتمام جن میں بنیادی اسلامی مضامین پر مشتمل 40 روزہ خصوصی کورس شامل ہے۔",
       "activities": ["40 Days Islamic Course", "Structured educational programs", "Subject-wise training", "Teacher training programs"],
-      "urduActivities": ["40 روزہ اسلامی کورس", "منظم تعلیمی پروگرام", "مضمون کے لحاظ سے تربیت", "اساتذہ کی تربیت کے پروگرام"],
       "impact": "Hundreds of graduates completing Islamic education courses annually.",
-      "urduImpact": "ہر سال سینکڑوں فارغ التحصیل اسلامی تعلیمی کورسز مکمل کر رہے ہیں۔",
-      "support": "Course materials, instructor fees, venue arrangements.",
-      "urduSupport": "کورس کا مواد، انسٹرکٹر کی فیس، مقام کے انتظامات۔"
+      "support": "Course materials, instructor fees, venue arrangements."
     },
     {
       "id": "children",
       "name": "Children's Organization Department",
-      "urduName": "شعبہ تنظیم اطفال",
       "purpose": "Dedicated to children's Islamic development through organized events, structured learning, and youth engagement activities.",
-      "urduPurpose": "منظم تقریبات، منظم تعلیم اور نوجوانوں کی مشغولیت کی سرگرمیوں کے ذریعے بچوں کی اسلامی نشوونما کے لیے وقف۔",
       "activities": ["Children's Islamic development", "Organized educational events", "Structured learning programs", "Youth engagement activities"],
-      "urduActivities": ["بچوں کی اسلامی نشوونما", "منظم تعلیمی تقریبات", "منظم تعلیمی پروگرام", "نوجوانوں کی مشغولیت کی سرگرمیاں"],
       "impact": "Engaging children in Islamic learning through creative and structured programs.",
-      "urduImpact": "تخلیقی اور منظم پروگراموں کے ذریعے بچوں کو اسلامی تعلیم میں مشغول کرنا۔",
-      "support": "Event organization, children's materials, activity resources.",
-      "urduSupport": "تقریبات کا اہتمام، بچوں کا مواد، سرگرمیوں کے وسائل۔"
+      "support": "Event organization, children's materials, activity resources."
     },
     {
       "id": "dawah",
       "name": "Dawah Department",
-      "urduName": "شعبہ دعوت",
       "purpose": "Conducting outreach activities and Islamic awareness campaigns to strengthen faith and understanding in the community.",
-      "urduPurpose": "معاشرے میں ایمان اور سمجھ بوجھ کو مضبوط بنانے کے لیے دعوتی سرگرمیاں اور اسلامی آگاہی مہمات۔",
       "activities": ["Community outreach activities", "Islamic awareness campaigns", "Educational seminars", "Interfaith dialogue sessions"],
-      "urduActivities": ["کمیونٹی تک رسائی کی سرگرمیاں", "اسلامی آگاہی مہمات", "تعلیمی سیمینارز", "بین المذاہب مکالمے"],
       "impact": "Reaching hundreds of community members through awareness and outreach programs.",
-      "urduImpact": "آگاہی اور رسائی کے پروگراموں کے ذریعے سینکڑوں لوگوں تک رسائی۔",
-      "support": "Campaign materials, event logistics, outreach resources.",
-      "urduSupport": "مہم کا مواد، تقریب کا لوجسٹکس، رسائی کے وسائل۔"
+      "support": "Campaign materials, event logistics, outreach resources."
     },
     {
       "id": "publications",
       "name": "Publications Department",
-      "urduName": "شعبہ نشرواشاعت",
       "purpose": "Managing Quran printing, Islamic book distribution, and educational material publication for widespread access to Islamic knowledge.",
-      "urduPurpose": "قرآن کی طباعت، اسلامی کتب کی تقسیم اور تعلیمی مواد کی اشاعت کا انتظام۔",
       "activities": ["Quran printing & distribution", "Islamic books publishing", "Educational material creation", "Teaching manuals & guides"],
-      "urduActivities": ["قرآن کی طباعت و تقسیم", "اسلامی کتب کی اشاعت", "تعلیمی مواد کی تخلیق", "تدریسی کتابچے اور رہنما"],
       "impact": "Thousands of Islamic books and Quran copies distributed across the community.",
-      "urduImpact": "ہزاروں اسلامی کتب اور قرآن کی کاپیاں معاشرے میں تقسیم کی گئیں۔",
-      "support": "Printing costs, distribution logistics, material development.",
-      "urduSupport": "طباعت کے اخراجات، تقسیم کا لوجسٹکس، مواد کی ترقی۔"
+      "support": "Printing costs, distribution logistics, material development."
     },
     {
       "id": "examination",
       "name": "Examination Department",
-      "urduName": "شعبہ امتحان",
       "purpose": "Conducting student testing and academic evaluation to ensure quality educational standards across all maktabs.",
-      "urduPurpose": "تمام مکاتب میں معیاری تعلیمی سطح کو یقینی بنانے کے لیے طلبہ کے امتحانات اور تعلیمی جانچ۔",
       "activities": ["Student examinations", "Academic evaluation", "Progress assessment", "Quality standards monitoring"],
-      "urduActivities": ["طلبہ کے امتحانات", "تعلیمی جانچ", "ترقی کی تشخیص", "معیار کی نگرانی"],
       "impact": "Standardized evaluation system ensuring consistent educational quality.",
-      "urduImpact": "معیاری جانچ کا نظام جو مستقل تعلیمی معیار کو یقینی بناتا ہے۔",
-      "support": "Examination materials, evaluation tools, administration costs.",
-      "urduSupport": "امتحانی مواد، جانچ کے اوزار، انتظامی اخراجات۔"
+      "support": "Examination materials, evaluation tools, administration costs."
     },
     {
       "id": "financial",
       "name": "Financial Support Department",
-      "urduName": "شعبہ تعاون مالی",
       "purpose": "Managing financial sponsorship programs to support teachers, students, book printing, and operational costs of the Trust.",
-      "urduPurpose": "ٹرسٹ کے اساتذہ، طلبہ، کتب کی طباعت اور آپریشنل اخراجات کی مدد کے لیے مالی کفالت کے پروگراموں کا انتظام۔",
       "activities": ["Teacher salary sponsorship", "Student fee support", "Book printing sponsorship", "Administrative support funding"],
-      "urduActivities": ["اساتذہ کی تنخواہ کی کفالت", "طلبہ کی فیس کی مدد", "کتب کی طباعت کی کفالت", "انتظامی مدد کی فنڈنگ"],
       "impact": "Enabling the entire trust operations through community financial support.",
-      "urduImpact": "کمیونٹی کی مالی مدد کے ذریعے پورے ٹرسٹ کے آپریشنز کو ممکن بنانا۔",
-      "support": "All sponsorship tiers contribute directly to trust operations.",
-      "urduSupport": "کفالت کے تمام درجے براہ راست ٹرسٹ کے آپریشنز میں حصہ ڈالتے ہیں۔"
+      "support": "All sponsorship tiers contribute directly to trust operations."
     }
   ]
 }

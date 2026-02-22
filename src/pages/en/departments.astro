@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import departmentsData from '../../content/en/departments.json';
+import departmentsDataUr from '../../content/ur/departments.json';
 
 const { departments } = departmentsData;
 ---
@@ -37,13 +38,13 @@ const { departments } = departmentsData;
                 </div>
                 <div class="flex-1">
                   <h2 class="text-2xl font-bold text-primary mb-1">{dept.name}</h2>
-                  <p class="text-lg font-urdu text-primary mb-4">{dept.urduName}</p>
+                  <p class="text-lg font-urdu text-primary mb-4">{departmentsDataUr.departments[index].name}</p>
                   
                   <div class="grid md:grid-cols-2 gap-6">
                     <div>
                       <h3 class="font-semibold text-gray-900 mb-2">Purpose</h3>
                       <p class="text-gray-600 mb-3">{dept.purpose}</p>
-                      <p class="text-gray-500 font-urdu leading-relaxed">{dept.urduPurpose}</p>
+                      <p class="text-gray-500 font-urdu leading-relaxed">{departmentsDataUr.departments[index].purpose}</p>
                     </div>
                     <div>
                       <h3 class="font-semibold text-gray-900 mb-2">Key Activities</h3>
@@ -53,7 +54,7 @@ const { departments } = departmentsData;
                         ))}
                       </ul>
                       <ul class="space-y-1">
-                        {dept.urduActivities.map(activity => (
+                        {departmentsDataUr.departments[index].activities.map(activity => (
                           <li class="text-gray-500 text-sm font-urdu text-right">{activity} •</li>
                         ))}
                       </ul>
@@ -64,12 +65,12 @@ const { departments } = departmentsData;
                     <div class="bg-green-50 rounded-lg p-4">
                       <h4 class="font-semibold text-green-800 mb-1">Impact</h4>
                       <p class="text-green-700 text-sm">{dept.impact}</p>
-                      <p class="text-green-600 text-sm font-urdu mt-1">{dept.urduImpact}</p>
+                      <p class="text-green-600 text-sm font-urdu mt-1">{departmentsDataUr.departments[index].impact}</p>
                     </div>
                     <div class="bg-amber-50 rounded-lg p-4">
                       <h4 class="font-semibold text-amber-800 mb-1">Support Needed</h4>
                       <p class="text-amber-700 text-sm">{dept.support}</p>
-                      <p class="text-amber-600 text-sm font-urdu mt-1">{dept.urduSupport}</p>
+                      <p class="text-amber-600 text-sm font-urdu mt-1">{departmentsDataUr.departments[index].support}</p>
                     </div>
                   </div>
                 </div>
