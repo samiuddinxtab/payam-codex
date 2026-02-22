@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import departmentsData from '../../content/en/departments.json';
+
+const { departments } = departmentsData;
+---
+
+<Layout 
+  title="Departments - Payam-e-Seerat Trust"
+  description="Explore the eight departments of Payam-e-Seerat Trust: Maktab, Madrasa, Courses, Children's Organization, Dawah, Publications, Examination, and Financial Support."
+  lang="en"
+>
+  <Header lang="en" currentPage="departments" />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-16 lg:py-24 geo-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4">Our Departments</h1>
+          <p class="text-2xl font-urdu text-gold">ہمارے شعبہ جات</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments List -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-8">
+          {departments.map((dept, index) => (
+            <div id={dept.id} class="bg-white rounded-2xl p-6 md:p-8 shadow-sm card-hover scroll-mt-24">
+              <div class="flex flex-col md:flex-row md:items-start gap-6">
+                <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
+                  <span class="text-2xl text-white font-bold">{index + 1}</span>
+                </div>
+                <div class="flex-1">
+                  <h2 class="text-2xl font-bold text-primary mb-1">{dept.name}</h2>
+                  <p class="text-lg font-urdu text-primary mb-4">{dept.urduName}</p>
+                  
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 class="font-semibold text-gray-900 mb-2">Purpose</h3>
+                      <p class="text-gray-600 mb-3">{dept.purpose}</p>
+                      <p class="text-gray-500 font-urdu leading-relaxed">{dept.urduPurpose}</p>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-gray-900 mb-2">Key Activities</h3>
+                      <ul class="space-y-1 mb-3">
+                        {dept.activities.map(activity => (
+                          <li class="text-gray-600 text-sm">• {activity}</li>
+                        ))}
+                      </ul>
+                      <ul class="space-y-1">
+                        {dept.urduActivities.map(activity => (
+                          <li class="text-gray-500 text-sm font-urdu text-right">{activity} •</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="mt-6 pt-6 border-t border-gray-100 grid md:grid-cols-2 gap-4">
+                    <div class="bg-green-50 rounded-lg p-4">
+                      <h4 class="font-semibold text-green-800 mb-1">Impact</h4>
+                      <p class="text-green-700 text-sm">{dept.impact}</p>
+                      <p class="text-green-600 text-sm font-urdu mt-1">{dept.urduImpact}</p>
+                    </div>
+                    <div class="bg-amber-50 rounded-lg p-4">
+                      <h4 class="font-semibold text-amber-800 mb-1">Support Needed</h4>
+                      <p class="text-amber-700 text-sm">{dept.support}</p>
+                      <p class="text-amber-600 text-sm font-urdu mt-1">{dept.urduSupport}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary geo-pattern text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Support Our Departments</h2>
+        <p class="text-xl font-urdu mb-6 text-gold">ہمارے شعبہ جات کی مدد کریں</p>
+        <a href="/en/support/" class="inline-block px-8 py-4 bg-gold text-primary-dark font-semibold rounded-lg hover:bg-gold-light transition-colors shadow-lg">
+          Donate Now
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer lang="en" />
+</Layout>

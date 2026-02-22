@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import contactData from '../../content/en/contact.json';
+
+const { title, urduTitle, description, urduDescription, addressLabel, urduAddressLabel, address, emailLabel, urduEmailLabel, email, websiteLabel, urduWebsiteLabel, website, hoursLabel, urduHoursLabel, hours, urduHours, fridayClosed, urduFridayClosed, phonesLabel, urduPhonesLabel, phones, mapLink, whatsappTitle, urduWhatsappTitle, whatsappText, urduWhatsappText, whatsappButton, urduWhatsappButton, whatsappNumber } = contactData;
+---
+
+<Layout 
+  title="Contact Us - Payam-e-Seerat Trust"
+  description="Contact Payam-e-Seerat Trust in Golconda, Hyderabad. Phone, WhatsApp, and email contact information."
+  lang="en"
+>
+  <Header lang="en" currentPage="contact" />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-16 lg:py-24 geo-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4">{title}</h1>
+          <p class="text-2xl font-urdu text-gold mb-4">{urduTitle}</p>
+          <p class="text-lg text-white/90 max-w-2xl mx-auto">{description}</p>
+          <p class="font-urdu text-white/80 mt-2">{urduDescription}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Details -->
+          <div class="space-y-6">
+            <div class="bg-cream rounded-xl p-6">
+              <h3 class="font-semibold text-primary mb-1">{addressLabel}</h3>
+              <p class="text-sm font-urdu text-primary mb-2">{urduAddressLabel}</p>
+              <p class="text-gray-700">{address}</p>
+            </div>
+            
+            <div class="bg-cream rounded-xl p-6">
+              <h3 class="font-semibold text-primary mb-1">{emailLabel}</h3>
+              <p class="text-sm font-urdu text-primary mb-2">{urduEmailLabel}</p>
+              <a href={`mailto:${email}`} class="text-primary hover:underline">{email}</a>
+            </div>
+            
+            <div class="bg-cream rounded-xl p-6">
+              <h3 class="font-semibold text-primary mb-1">{websiteLabel}</h3>
+              <p class="text-sm font-urdu text-primary mb-2">{urduWebsiteLabel}</p>
+              <a href={`https://${website}`} class="text-primary hover:underline">{website}</a>
+            </div>
+            
+            <div class="bg-cream rounded-xl p-6">
+              <h3 class="font-semibold text-primary mb-1">{hoursLabel}</h3>
+              <p class="text-sm font-urdu text-primary mb-2">{urduHoursLabel}</p>
+              <p class="text-gray-700">{hours}</p>
+              <p class="text-gray-500 font-urdu mt-1">{urduHours}</p>
+              <p class="text-red-600 text-sm mt-2">{fridayClosed}</p>
+              <p class="text-red-500 text-sm font-urdu">{urduFridayClosed}</p>
+            </div>
+          </div>
+          
+          <!-- Map and Phones -->
+          <div class="space-y-6">
+            <!-- Map -->
+            <div class="bg-cream rounded-xl p-6">
+              <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4">
+                <img src="/map.jpg" alt="Location Map" class="w-full h-full object-cover rounded-lg" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'text-gray-400\\'>Map Placeholder</span>';" />
+              </div>
+              <a 
+                href={mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block w-full text-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+              >
+                Open in Google Maps
+              </a>
+            </div>
+            
+            <!-- Phone Numbers -->
+            <div class="bg-cream rounded-xl p-6">
+              <h3 class="font-semibold text-primary mb-1">{phonesLabel}</h3>
+              <p class="text-sm font-urdu text-primary mb-4">{urduPhonesLabel}</p>
+              <div class="space-y-3">
+                {phones.map(phone => (
+                  <a 
+                    href={`tel:${phone.number.replace(/\s/g, '')}`}
+                    class="flex justify-between items-center bg-white rounded-lg p-3 hover:shadow-sm transition-shadow"
+                  >
+                    <span class="text-gray-500 text-sm">{phone.label}</span>
+                    <span class="font-medium text-primary">{phone.number}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Section -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-8 md:p-12 text-white text-center">
+          <div class="text-5xl mb-4">💬</div>
+          <h2 class="text-3xl font-bold mb-2">{whatsappTitle}</h2>
+          <p class="text-xl font-urdu mb-4 text-green-200">{urduWhatsappTitle}</p>
+          <p class="text-white/90 mb-4">{whatsappText}</p>
+          <p class="font-urdu text-white/80 mb-8">{urduWhatsappText}</p>
+          <a 
+            href={`https://wa.me/${whatsappNumber}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block px-8 py-4 bg-white text-green-700 font-semibold rounded-lg hover:bg-green-50 transition-colors shadow-lg"
+          >
+            {whatsappButton}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer lang="en" />
+</Layout>

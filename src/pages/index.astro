@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Payam-e-Seerat Trust | Language Selection">
+  <div class="min-h-screen bg-cream flex items-center justify-center px-4">
+    <div class="max-w-md w-full text-center">
+      <div class="mb-8">
+        <span class="text-8xl">☪</span>
+      </div>
+      
+      <h1 class="text-3xl font-bold text-primary mb-2">Payam-e-Seerat Trust</h1>
+      <p class="text-xl text-primary font-urdu mb-2">پیام سیرت ٹرسٹ</p>
+      <p class="text-gray-600 mb-12">Religious Educational & Welfare Trust<br/>مذہبی تعلیمی و فلاحی ٹرسٹ</p>
+      
+      <div class="space-y-4">
+        <a 
+          href="/en/" 
+          class="block w-full py-4 px-6 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-primary-dark transition-colors shadow-lg"
+        >
+          English
+        </a>
+        <a 
+          href="/ur/" 
+          class="block w-full py-4 px-6 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-primary-dark transition-colors shadow-lg font-urdu"
+        >
+          اردو
+        </a>
+      </div>
+      
+      <p class="mt-8 text-sm text-gray-500">Golconda, Hyderabad</p>
+    </div>
+  </div>
+</Layout>

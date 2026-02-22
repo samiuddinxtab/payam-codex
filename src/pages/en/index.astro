@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import homeData from '../../content/en/home.json';
+
+const { hero, mission, stats, departmentsPreview } = homeData;
+---
+
+<Layout 
+  title="Payam-e-Seerat Trust - Religious Educational & Welfare Trust"
+  description="Payam-e-Seerat Trust is a registered Religious Educational & Welfare Trust based in Golconda, Hyderabad. Serving 150+ maktabs with 200+ teachers and 5000+ students."
+  lang="en"
+>
+  <Header lang="en" currentPage="index" />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-primary geo-pattern text-white py-20 lg:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="flex items-center justify-center gap-3 mb-6">
+            <span class="text-6xl">☪</span>
+          </div>
+          <h1 class="text-4xl lg:text-6xl font-bold mb-4 fade-in">{hero.title}</h1>
+          <p class="text-2xl lg:text-3xl font-urdu mb-4 text-gold fade-in-d1">{hero.urduTitle}</p>
+          <p class="text-xl text-white/90 mb-2 fade-in-d2">{hero.subtitle}</p>
+          <p class="text-lg font-urdu text-white/80 mb-6 fade-in-d2">{hero.urduSubtitle}</p>
+          <p class="text-white/70 mb-8 fade-in-d3">📍 {hero.location}</p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-d3">
+            <a href="/en/departments/" class="px-8 py-4 bg-gold text-primary-dark font-semibold rounded-lg hover:bg-gold-light transition-colors shadow-lg">
+              {hero.ctaPrimary}
+            </a>
+            <a href="/en/support/" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors border border-white/30">
+              {hero.ctaSecondary}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map(stat => (
+            <div class="text-center">
+              <div class="text-4xl lg:text-5xl font-bold text-primary mb-2">{stat.value}</div>
+              <div class="text-gray-600">{stat.label}</div>
+              <div class="text-sm text-gray-500 font-urdu">{stat.urduLabel}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-primary mb-2">Our Mission</h2>
+          <p class="text-lg font-urdu text-gray-600">ہمارا مقصد</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {mission.map((item, index) => (
+            <div class={`bg-white rounded-xl p-6 shadow-sm card-hover ${index % 2 === 0 ? 'fade-in' : 'fade-in-d1'}`}>
+              <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+              <p class="text-sm font-urdu text-primary mb-3">{item.urduTitle}</p>
+              <p class="text-gray-600 text-sm mb-3">{item.text}</p>
+              <p class="text-gray-500 text-sm font-urdu leading-relaxed">{item.urduText}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments Preview -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-primary mb-2">Our Departments</h2>
+          <p class="text-lg font-urdu text-gray-600">ہمارے شعبہ جات</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {departmentsPreview.map(dept => (
+            <a 
+              href="/en/departments/" 
+              class="bg-cream rounded-lg p-4 text-center hover:bg-cream-dark transition-colors group"
+            >
+              <h3 class="font-semibold text-primary group-hover:text-primary-dark transition-colors">{dept.name}</h3>
+              <p class="text-sm font-urdu text-gray-600 mt-1">{dept.urduName}</p>
+            </a>
+          ))}
+        </div>
+        
+        <div class="text-center mt-8">
+          <a href="/en/departments/" class="inline-block px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
+            View All Departments
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary geo-pattern text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Support Our Mission</h2>
+        <p class="text-xl font-urdu mb-6 text-gold">ہمارے مشن کی مدد کریں</p>
+        <p class="text-white/90 mb-8 max-w-2xl mx-auto">
+          Your contribution helps us educate thousands of children, support teachers, and spread Islamic knowledge across the community.
+        </p>
+        <a href="/en/support/" class="inline-block px-8 py-4 bg-gold text-primary-dark font-semibold rounded-lg hover:bg-gold-light transition-colors shadow-lg">
+          Donate Now
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer lang="en" />
+</Layout>

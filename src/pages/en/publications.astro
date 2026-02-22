@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import publicationsData from '../../content/en/publications.json';
+
+const { quranSection, materials } = publicationsData;
+---
+
+<Layout 
+  title="Publications - Payam-e-Seerat Trust"
+  description="Explore the Quran distribution program and Islamic publications from Payam-e-Seerat Trust."
+  lang="en"
+>
+  <Header lang="en" currentPage="publications" />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-16 lg:py-24 geo-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4">Publications</h1>
+          <p class="text-2xl font-urdu text-gold">نشرواشاعت</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quran Distribution -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-primary mb-2">{quranSection.title}</h2>
+            <p class="text-xl font-urdu text-gray-600 mb-6">{quranSection.urduTitle}</p>
+            <p class="text-gray-600 mb-6">{quranSection.description}</p>
+            <p class="text-gray-500 font-urdu leading-loose mb-6">{quranSection.urduDescription}</p>
+            
+            <ul class="space-y-3 mb-8">
+              {quranSection.features.map(feature => (
+                <li class="flex items-start gap-3">
+                  <span class="text-gold text-lg">✓</span>
+                  <div>
+                    <span class="text-gray-700">{feature.text}</span>
+                    <span class="block text-sm font-urdu text-gray-500">{feature.urduText}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            
+            <div class="bg-cream rounded-xl p-6">
+              <h3 class="font-semibold text-primary mb-2">{quranSection.ctaTitle}</h3>
+              <p class="text-sm font-urdu text-primary mb-3">{quranSection.urduCtaTitle}</p>
+              <p class="text-gray-600 text-sm mb-4">{quranSection.ctaText}</p>
+              <p class="text-gray-500 text-sm font-urdu">{quranSection.urduCtaText}</p>
+              <a href="/en/support/" class="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
+                Sponsor Now
+              </a>
+            </div>
+          </div>
+          
+          <div class="bg-cream rounded-2xl p-8 text-center">
+            <div class="w-32 h-40 bg-primary/10 rounded-lg mx-auto mb-6 flex items-center justify-center">
+              <span class="text-6xl">☪</span>
+            </div>
+            <p class="text-gray-500 italic">Quran distribution program</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational Materials -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-primary mb-2">Educational Materials</h2>
+          <p class="text-lg font-urdu text-gray-600">تعلیمی مواد</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          {materials.map(material => (
+            <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+              <h3 class="text-lg font-semibold text-primary mb-2">{material.name}</h3>
+              <p class="text-sm font-urdu text-primary mb-4">{material.urduName}</p>
+              <p class="text-gray-600 text-sm mb-3">{material.description}</p>
+              <p class="text-gray-500 text-sm font-urdu leading-relaxed">{material.urduDescription}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer lang="en" />
+</Layout>
