@@ -1,39 +1,32 @@
 {
   "featuredCourse": {
-    "name": "40 Days Islamic Course",
-    "urduName": "40 روزہ اسلامی کورس",
-    "description": "A comprehensive 40-day intensive Islamic education program covering all core subjects.",
-    "urduDescription": "ایک جامع 40 روزہ اسلامی تعلیمی پروگرام جو تمام بنیادی مضامین کا احاطہ کرتا ہے۔",
-    "duration": "40 Days",
-    "urduDuration": "40 دن",
-    "subjectsCount": "7 Subjects",
-    "urduSubjectsCount": "7 مضامین",
-    "badge": "FLAGSHIP",
-    "urduBadge": "نمایاں"
+    "name": "40 روزہ اسلامی کورس",
+    "description": "ایک جامع 40 روزہ اسلامی تعلیمی پروگرام جو تمام بنیادی مضامین کا احاطہ کرتا ہے۔",
+    "duration": "40 دن",
+    "subjectsCount": "7 مضامین",
+    "badge": "نمایاں"
   },
   "courseSubjects": [
-    { "name": "Islamic History (Tareekh)", "urduName": "تاریخ اسلام" },
-    { "name": "Aqeedah (Islamic Beliefs)", "urduName": "عقیدہ" },
-    { "name": "Seerat-un-Nabi ﷺ", "urduName": "سیرت النبی ﷺ" },
-    { "name": "Basic Fiqh (Islamic Jurisprudence)", "urduName": "بنیادی فقہ" },
-    { "name": "Namaz & Worship Practices", "urduName": "نماز اور عبادات" },
-    { "name": "Islamic Manners & Ethics (Adab)", "urduName": "اسلامی آداب و اخلاق" },
-    { "name": "Contemporary Islamic Issues", "urduName": "عصری اسلامی مسائل" }
+    { "name": "تاریخ اسلام" },
+    { "name": "عقیدہ" },
+    { "name": "سیرت النبی ﷺ" },
+    { "name": "بنیادی فقہ" },
+    { "name": "نماز اور عبادات" },
+    { "name": "اسلامی آداب و اخلاق" },
+    { "name": "عصری اسلامی مسائل" }
   ],
-  "trainingTitle": "Teacher Training Program",
-  "urduTrainingTitle": "اساتذہ کی تربیت کا پروگرام",
-  "trainingDescription": "Comprehensive training programs to equip teachers with modern teaching methodologies while preserving Islamic educational values.",
-  "urduTrainingDescription": "اساتذہ کو جدید تدریسی طریقہ کار سے لیس کرنے کے لیے جامع تربیتی پروگرام جبکہ اسلامی تعلیمی اقدار کو محفوظ رکھنا۔",
+  "trainingTitle": "اساتذہ کی تربیت کا پروگرام",
+  "trainingDescription": "اساتذہ کو جدید تدریسی طریقہ کار سے لیس کرنے کے لیے جامع تربیتی پروگرام جبکہ اسلامی تعلیمی اقدار کو محفوظ رکھنا۔",
   "trainingTopics": [
-    { "name": "Teaching Methodology", "urduName": "تدریسی طریقہ کار" },
-    { "name": "Classroom Discipline", "urduName": "کلاس روم کا نظم و ضبط" },
-    { "name": "Moral Leadership", "urduName": "اخلاقی قیادت" },
-    { "name": "Student Engagement", "urduName": "طلبہ کی شمولیت" }
+    { "name": "تدریسی طریقہ کار" },
+    { "name": "کلاس روم کا نظم و ضبط" },
+    { "name": "اخلاقی قیادت" },
+    { "name": "طلبہ کی شمولیت" }
   ],
   "trainingIncludes": [
-    { "text": "Modern teaching method training adapted for Islamic education", "urduText": "اسلامی تعلیم کے لیے جدید تدریسی طریقہ کار کی تربیت" },
-    { "text": "Classroom discipline and student management education", "urduText": "کلاس روم کے نظم و ضبط اور طلبہ کے انتظام کی تعلیم" },
-    { "text": "Moral and spiritual leadership development", "urduText": "اخلاقی اور روحانی قیادت کی ترقی" },
-    { "text": "Use of Taleem Pro digital management tools", "urduText": "تعلیم پرو ڈیجیٹل انتظامی ٹولز کا استعمال" }
+    { "text": "اسلامی تعلیم کے لیے جدید تدریسی طریقہ کار کی تربیت" },
+    { "text": "کلاس روم کے نظم و ضبط اور طلبہ کے انتظام کی تعلیم" },
+    { "text": "اخلاقی اور روحانی قیادت کی ترقی" },
+    { "text": "تعلیم پرو ڈیجیٹل انتظامی ٹولز کا استعمال" }
   ]
 }

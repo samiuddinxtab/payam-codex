@@ -1,31 +1,22 @@
 {
   "intro": "Payam-e-Seerat Trust is a registered Religious Educational & Welfare Trust based in Golconda, Hyderabad. Established with the vision of promoting Islamic education and moral development, the Trust operates through eight organized departments serving thousands of students across the region.",
-  "urduIntro": "پیام سیرت ٹرسٹ ایک رجسٹرڈ مذہبی تعلیمی و فلاحی ٹرسٹ ہے جو گولکنڈہ، حیدرآباد میں قائم ہے۔ اسلامی تعلیم اور اخلاقی ترقی کے فروغ کے وژن کے ساتھ قائم کیا گیا، یہ ٹرسٹ آٹھ منظم شعبوں کے ذریعے پورے خطے میں ہزاروں طلبہ کی خدمت کرتا ہے۔",
   "regNumber": "Reg. No. 6/2026",
   "objectives": [
     {
       "title": "Islamic Education for Children",
-      "urduTitle": "بچوں کے لیے اسلامی تعلیم",
-      "text": "Providing accessible Islamic education to every child regardless of their background.",
-      "urduText": "ہر بچے کو اس کے پس منظر سے قطع نظر قابل رسائی اسلامی تعلیم فراہم کرنا۔"
+      "text": "Providing accessible Islamic education to every child regardless of their background."
     },
     {
       "title": "Organized Teaching Structure",
-      "urduTitle": "منظم تدریسی ڈھانچہ",
-      "text": "A systematic approach to teaching with trained teachers and structured curriculum.",
-      "urduText": "تربیت یافتہ اساتذہ اور منظم نصاب کے ساتھ تدریس کا ایک منظم طریقہ۔"
+      "text": "A systematic approach to teaching with trained teachers and structured curriculum."
     },
     {
       "title": "Moral Upbringing Programs",
-      "urduTitle": "اخلاقی تربیت کے پروگرام",
-      "text": "Building character and Islamic values in the younger generation.",
-      "urduText": "نوجوان نسل میں کردار سازی اور اسلامی اقدار کا فروغ۔"
+      "text": "Building character and Islamic values in the younger generation."
     },
     {
       "title": "Taleem Pro Coordination",
-      "urduTitle": "تعلیم پرو کوآرڈینیشن",
-      "text": "Digital educational coordination through Taleem Pro software system.",
-      "urduText": "تعلیم پرو سافٹ ویئر سسٹم کے ذریعے ڈیجیٹل تعلیمی ہم آہنگی۔"
+      "text": "Digital educational coordination through Taleem Pro software system."
     }
   ]
 }

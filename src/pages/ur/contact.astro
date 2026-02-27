@@ -3,8 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import contactData from '../../content/ur/contact.json';
+import contactDataEn from '../../content/en/contact.json';
 
-const { title, urduTitle, description, urduDescription, addressLabel, urduAddressLabel, address, emailLabel, urduEmailLabel, email, websiteLabel, urduWebsiteLabel, website, hoursLabel, urduHoursLabel, hours, urduHours, fridayClosed, urduFridayClosed, phonesLabel, urduPhonesLabel, phones, mapLink, whatsappTitle, urduWhatsappTitle, whatsappText, urduWhatsappText, whatsappButton, urduWhatsappButton, whatsappNumber } = contactData;
+const { title, description, addressLabel, address, emailLabel, email, websiteLabel, website, hoursLabel, hours, fridayClosed, phonesLabel, phones, mapLink, whatsappTitle, whatsappText, whatsappButton, whatsappNumber } = contactData;
 ---
 
 <Layout 
@@ -19,10 +20,10 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
     <section class="bg-primary text-white py-16 lg:py-24 geo-pattern">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h1 class="text-4xl lg:text-5xl font-bold mb-4 font-urdu">{urduTitle}</h1>
-          <p class="text-2xl text-gold mb-4">{title}</p>
-          <p class="text-lg text-white/90 max-w-2xl mx-auto font-urdu leading-loose">{urduDescription}</p>
-          <p class="text-white/80 mt-2">{description}</p>
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4 font-urdu">{title}</h1>
+          <p class="text-2xl text-gold mb-4">{contactDataEn.title}</p>
+          <p class="text-lg text-white/90 max-w-2xl mx-auto font-urdu leading-loose">{description}</p>
+          <p class="text-white/80 mt-2">{contactDataEn.description}</p>
         </div>
       </div>
     </section>
@@ -34,30 +35,30 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
           <!-- Contact Details -->
           <div class="space-y-6 text-right">
             <div class="bg-cream rounded-xl p-6">
-              <h3 class="font-semibold text-primary mb-1 font-urdu">{urduAddressLabel}</h3>
-              <p class="text-sm text-primary mb-2">{addressLabel}</p>
+              <h3 class="font-semibold text-primary mb-1 font-urdu">{addressLabel}</h3>
+              <p class="text-sm text-primary mb-2">{contactDataEn.addressLabel}</p>
               <p class="text-gray-700 font-urdu">{address}</p>
             </div>
             
             <div class="bg-cream rounded-xl p-6">
-              <h3 class="font-semibold text-primary mb-1 font-urdu">{urduEmailLabel}</h3>
-              <p class="text-sm text-primary mb-2">{emailLabel}</p>
+              <h3 class="font-semibold text-primary mb-1 font-urdu">{emailLabel}</h3>
+              <p class="text-sm text-primary mb-2">{contactDataEn.emailLabel}</p>
               <a href={`mailto:${email}`} class="text-primary hover:underline">{email}</a>
             </div>
             
             <div class="bg-cream rounded-xl p-6">
-              <h3 class="font-semibold text-primary mb-1 font-urdu">{urduWebsiteLabel}</h3>
-              <p class="text-sm text-primary mb-2">{websiteLabel}</p>
+              <h3 class="font-semibold text-primary mb-1 font-urdu">{websiteLabel}</h3>
+              <p class="text-sm text-primary mb-2">{contactDataEn.websiteLabel}</p>
               <a href={`https://${website}`} class="text-primary hover:underline">{website}</a>
             </div>
             
             <div class="bg-cream rounded-xl p-6">
-              <h3 class="font-semibold text-primary mb-1 font-urdu">{urduHoursLabel}</h3>
-              <p class="text-sm text-primary mb-2">{hoursLabel}</p>
-              <p class="text-gray-700 font-urdu">{urduHours}</p>
-              <p class="text-gray-500 mt-1">{hours}</p>
-              <p class="text-red-600 text-sm mt-2 font-urdu">{urduFridayClosed}</p>
-              <p class="text-red-500 text-sm">{fridayClosed}</p>
+              <h3 class="font-semibold text-primary mb-1 font-urdu">{hoursLabel}</h3>
+              <p class="text-sm text-primary mb-2">{contactDataEn.hoursLabel}</p>
+              <p class="text-gray-700 font-urdu">{hours}</p>
+              <p class="text-gray-500 mt-1">{contactDataEn.hours}</p>
+              <p class="text-red-600 text-sm mt-2 font-urdu">{fridayClosed}</p>
+              <p class="text-red-500 text-sm">{contactDataEn.fridayClosed}</p>
             </div>
           </div>
           
@@ -66,7 +67,7 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
             <!-- Map -->
             <div class="bg-cream rounded-xl p-6">
               <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4">
-                <img src="/map.jpg" alt="Location Map" class="w-full h-full object-cover rounded-lg" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'text-gray-400 font-urdu\\'>نقشہ پلیس ہولڈر</span>';" />
+                <span class="text-gray-500">Map loading...</span>
               </div>
               <a 
                 href={mapLink}
@@ -80,8 +81,8 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
             
             <!-- Phone Numbers -->
             <div class="bg-cream rounded-xl p-6" dir="rtl">
-              <h3 class="font-semibold text-primary mb-1 font-urdu">{urduPhonesLabel}</h3>
-              <p class="text-sm text-primary mb-4">{phonesLabel}</p>
+              <h3 class="font-semibold text-primary mb-1 font-urdu">{phonesLabel}</h3>
+              <p class="text-sm text-primary mb-4">{contactDataEn.phonesLabel}</p>
               <div class="space-y-3 text-right">
                 {phones.map(phone => (
                   <a 
@@ -104,17 +105,17 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-8 md:p-12 text-white text-center">
           <div class="text-5xl mb-4">💬</div>
-          <h2 class="text-3xl font-bold mb-2 font-urdu">{urduWhatsappTitle}</h2>
-          <p class="text-xl mb-4 text-green-200">{whatsappTitle}</p>
-          <p class="text-white/90 mb-4 font-urdu">{urduWhatsappText}</p>
-          <p class="text-white/80 mb-8">{whatsappText}</p>
+          <h2 class="text-3xl font-bold mb-2 font-urdu">{whatsappTitle}</h2>
+          <p class="text-xl mb-4 text-green-200">{contactDataEn.whatsappTitle}</p>
+          <p class="text-white/90 mb-4 font-urdu">{whatsappText}</p>
+          <p class="text-white/80 mb-8">{contactDataEn.whatsappText}</p>
           <a 
             href={`https://wa.me/${whatsappNumber}`}
             target="_blank"
             rel="noopener noreferrer"
             class="inline-block px-8 py-4 bg-white text-green-700 font-semibold rounded-lg hover:bg-green-50 transition-colors shadow-lg font-urdu"
           >
-            {urduWhatsappButton}
+            {whatsappButton}
           </a>
         </div>
       </div>

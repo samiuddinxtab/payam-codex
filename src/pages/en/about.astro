@@ -3,8 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import aboutData from '../../content/en/about.json';
+import aboutDataUr from '../../content/ur/about.json';
 
-const { intro, urduIntro, regNumber, objectives } = aboutData;
+const { intro, regNumber, objectives } = aboutData;
 ---
 
 <Layout 
@@ -30,7 +31,7 @@ const { intro, urduIntro, regNumber, objectives } = aboutData;
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-cream rounded-2xl p-8 md:p-12">
           <p class="text-lg text-gray-700 leading-relaxed mb-6">{intro}</p>
-          <p class="text-lg font-urdu text-gray-600 leading-loose text-right">{urduIntro}</p>
+          <p class="text-lg font-urdu text-gray-600 leading-loose text-right">{aboutDataUr.intro}</p>
           <div class="mt-6 pt-6 border-t border-gray-200">
             <span class="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">
               {regNumber}
@@ -57,9 +58,9 @@ const { intro, urduIntro, regNumber, objectives } = aboutData;
                 </div>
                 <div>
                   <h3 class="text-lg font-semibold text-primary mb-1">{obj.title}</h3>
-                  <p class="text-sm font-urdu text-primary mb-3">{obj.urduTitle}</p>
+                  <p class="text-sm font-urdu text-primary mb-3">{aboutDataUr.objectives[index].title}</p>
                   <p class="text-gray-600 text-sm mb-2">{obj.text}</p>
-                  <p class="text-gray-500 text-sm font-urdu leading-relaxed">{obj.urduText}</p>
+                  <p class="text-gray-500 text-sm font-urdu leading-relaxed">{aboutDataUr.objectives[index].text}</p>
                 </div>
               </div>
             </div>

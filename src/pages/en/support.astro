@@ -3,8 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import supportData from '../../content/en/support.json';
+import supportDataUr from '../../content/ur/support.json';
 
-const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle, upiText, urduUpiText, bankNote, urduBankNote, tiersTitle, urduTiersTitle, tiersDescription, urduTiersDescription, monthlyLabel, urduMonthlyLabel, yearlyLabel, urduYearlyLabel, mostImpactfulBadge, urduMostImpactfulBadge, tiers, impactTitle, urduImpactTitle, impactItems, contactTitle, urduContactTitle, contactText, urduContactText } = supportData;
+const { heroTitle, heroText, upiTitle, upiText, bankNote, tiersTitle, tiersDescription, monthlyLabel, yearlyLabel, mostImpactfulBadge, tiers, impactTitle, impactItems, contactTitle, contactText } = supportData;
 ---
 
 <Layout 
@@ -20,9 +21,9 @@ const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-4xl lg:text-5xl font-bold mb-4">{heroTitle}</h1>
-          <p class="text-2xl font-urdu text-gold mb-6">{urduHeroTitle}</p>
+          <p class="text-2xl font-urdu text-gold mb-6">{supportDataUr.heroTitle}</p>
           <p class="text-lg text-white/90 mb-4">{heroText}</p>
-          <p class="font-urdu text-white/80 leading-loose">{urduHeroText}</p>
+          <p class="font-urdu text-white/80 leading-loose">{supportDataUr.heroText}</p>
         </div>
       </div>
     </section>
@@ -34,20 +35,20 @@ const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle
           <!-- UPI QR -->
           <div class="bg-cream rounded-2xl p-8 text-center">
             <h2 class="text-2xl font-bold text-primary mb-2">{upiTitle}</h2>
-            <p class="text-lg font-urdu text-gray-600 mb-6">{urduUpiTitle}</p>
+            <p class="text-lg font-urdu text-gray-600 mb-6">{supportDataUr.upiTitle}</p>
             
             <div class="bg-white rounded-xl p-6 mb-6 inline-block">
               <div class="w-48 h-48 bg-gray-200 rounded-lg flex items-center justify-center mx-auto">
-                <img src="/upi.png" alt="UPI QR Code" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'text-gray-400\\'>QR Code Placeholder</span>';" />
+                <span class="text-gray-500 text-center px-4">UPI QR Code<br/>Contact via WhatsApp</span>
               </div>
             </div>
             
             <p class="text-gray-600 mb-2">{upiText}</p>
-            <p class="text-gray-500 font-urdu">{urduUpiText}</p>
+            <p class="text-gray-500 font-urdu">{supportDataUr.upiText}</p>
             
             <div class="mt-6 pt-6 border-t border-gray-200">
               <p class="text-sm text-gray-500">{bankNote}</p>
-              <p class="text-sm font-urdu text-gray-400 mt-1">{urduBankNote}</p>
+              <p class="text-sm font-urdu text-gray-400 mt-1">{supportDataUr.bankNote}</p>
             </div>
           </div>
           
@@ -82,13 +83,13 @@ const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-primary mb-2">{tiersTitle}</h2>
-          <p class="text-lg font-urdu text-gray-600 mb-4">{urduTiersTitle}</p>
+          <p class="text-lg font-urdu text-gray-600 mb-4">{supportDataUr.tiersTitle}</p>
           <p class="text-gray-600 max-w-2xl mx-auto">{tiersDescription}</p>
-          <p class="text-gray-500 font-urdu mt-2">{urduTiersDescription}</p>
+          <p class="text-gray-500 font-urdu mt-2">{supportDataUr.tiersDescription}</p>
         </div>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tiers.map(tier => (
+          {tiers.map((tier, index) => (
             <div class={`rounded-xl p-6 ${tier.highlight ? 'bg-primary text-white' : 'bg-white'}`}>
               {tier.highlight && (
                 <span class="inline-block px-3 py-1 bg-gold text-primary-dark text-xs font-bold rounded-full mb-4">
@@ -99,7 +100,7 @@ const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle
                 {tier.name}
               </h3>
               <p class={`text-sm font-urdu mb-4 ${tier.highlight ? 'text-white/80' : 'text-gray-600'}`}>
-                {tier.urduName}
+                {supportDataUr.tiers[index].name}
               </p>
               
               <div class="flex gap-4 mb-4">
@@ -108,7 +109,7 @@ const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle
                     {tier.monthly}
                   </div>
                   <div class={`text-xs ${tier.highlight ? 'text-white/70' : 'text-gray-500'}`}>
-                    {urduMonthlyLabel}
+                    {monthlyLabel}
                   </div>
                 </div>
                 <div class={`w-px ${tier.highlight ? 'bg-white/20' : 'bg-gray-200'}`}></div>
@@ -117,7 +118,7 @@ const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle
                     {tier.yearly}
                   </div>
                   <div class={`text-xs ${tier.highlight ? 'text-white/70' : 'text-gray-500'}`}>
-                    {urduYearlyLabel}
+                    {yearlyLabel}
                   </div>
                 </div>
               </div>
@@ -126,7 +127,7 @@ const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle
                 {tier.description}
               </p>
               <p class={`text-sm font-urdu ${tier.highlight ? 'text-white/70' : 'text-gray-500'}`}>
-                {tier.urduDescription}
+                {supportDataUr.tiers[index].description}
               </p>
             </div>
           ))}
@@ -139,16 +140,16 @@ const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-primary mb-2">{impactTitle}</h2>
-          <p class="text-lg font-urdu text-gray-600">{urduImpactTitle}</p>
+          <p class="text-lg font-urdu text-gray-600">{supportDataUr.impactTitle}</p>
         </div>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {impactItems.map(item => (
+          {impactItems.map((item, index) => (
             <div class="flex items-start gap-3 bg-cream rounded-lg p-4">
               <span class="text-gold text-xl flex-shrink-0">✓</span>
               <div>
                 <span class="text-gray-700">{item.text}</span>
-                <span class="block text-sm font-urdu text-gray-500">{item.urduText}</span>
+                <span class="block text-sm font-urdu text-gray-500">{supportDataUr.impactItems[index].text}</span>
               </div>
             </div>
           ))}
@@ -160,9 +161,9 @@ const { heroTitle, urduHeroTitle, heroText, urduHeroText, upiTitle, urduUpiTitle
     <section class="py-16 bg-primary geo-pattern text-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold mb-4">{contactTitle}</h2>
-        <p class="text-xl font-urdu mb-6 text-gold">{urduContactTitle}</p>
+        <p class="text-xl font-urdu mb-6 text-gold">{supportDataUr.contactTitle}</p>
         <p class="text-white/90 mb-4">{contactText}</p>
-        <p class="font-urdu text-white/80 mb-8">{urduContactText}</p>
+        <p class="font-urdu text-white/80 mb-8">{supportDataUr.contactText}</p>
         <a 
           href="https://wa.me/919533482794" 
           target="_blank"

@@ -1,55 +1,43 @@
 {
   "hero": {
-    "title": "Payam-e-Seerat Trust",
-    "urduTitle": "پیام سیرت ٹرسٹ",
-    "subtitle": "Religious Educational & Welfare Trust",
-    "urduSubtitle": "مذہبی تعلیمی و فلاحی ٹرسٹ",
+    "title": "پیام سیرت ٹرسٹ",
+    "subtitle": "مذہبی تعلیمی و فلاحی ٹرسٹ",
     "location": "Golconda, Hyderabad",
-    "ctaPrimary": "Explore Departments",
-    "ctaPrimaryUrdu": "شعبہ جات دیکھیں",
-    "ctaSecondary": "Support the Mission",
-    "ctaSecondaryUrdu": "مشن کی مدد کریں"
+    "ctaPrimary": "شعبہ جات دیکھیں",
+    "ctaSecondary": "مشن کی مدد کریں"
   },
   "mission": [
     {
-      "title": "Promote Islamic Education",
-      "urduTitle": "اسلامی تعلیم کا فروغ",
-      "text": "Establishing and managing maktabs and madrasas for quality Islamic education.",
-      "urduText": "معیاری اسلامی تعلیم کے لیے مکاتب اور مدارس کا قیام اور انتظام۔"
+      "title": "اسلامی تعلیم کا فروغ",
+      "text": "معیاری اسلامی تعلیم کے لیے مکاتب اور مدارس کا قیام اور انتظام۔"
     },
     {
-      "title": "Support Quran Learning",
-      "urduTitle": "قرآنی تعلیم کی مدد",
-      "text": "Making Quran education accessible to every child in the community.",
-      "urduText": "ہر بچے کے لیے قرآنی تعلیم کو قابل رسائی بنانا۔"
+      "title": "قرآنی تعلیم کی مدد",
+      "text": "ہر بچے کے لیے قرآنی تعلیم کو قابل رسائی بنانا۔"
     },
     {
-      "title": "Moral Upbringing",
-      "urduTitle": "اخلاقی تربیت",
-      "text": "Strengthening moral character and Islamic values in youth.",
-      "urduText": "نوجوانوں میں اخلاقی کردار اور اسلامی اقدار کو مضبوط بنانا۔"
+      "title": "اخلاقی تربیت",
+      "text": "نوجوانوں میں اخلاقی کردار اور اسلامی اقدار کو مضبوط بنانا۔"
     },
     {
-      "title": "Community Service",
-      "urduTitle": "خدمت خلق",
-      "text": "Serving the community through organized departments and welfare programs.",
-      "urduText": "منظم شعبوں اور فلاحی پروگراموں کے ذریعے معاشرے کی خدمت۔"
+      "title": "خدمت خلق",
+      "text": "منظم شعبوں اور فلاحی پروگراموں کے ذریعے معاشرے کی خدمت۔"
     }
   ],
   "stats": [
-    { "value": "150+", "label": "Maktabs", "urduLabel": "مکاتب" },
-    { "value": "200+", "label": "Teachers", "urduLabel": "اساتذہ" },
-    { "value": "5000+", "label": "Students", "urduLabel": "طلبہ" },
-    { "value": "8", "label": "Departments", "urduLabel": "شعبہ جات" }
+    { "value": "150+", "label": "مکاتب" },
+    { "value": "200+", "label": "اساتذہ" },
+    { "value": "5000+", "label": "طلبہ" },
+    { "value": "8", "label": "شعبہ جات" }
   ],
   "departmentsPreview": [
-    { "id": "maktab", "name": "Maktab Department", "urduName": "شعبہ مکاتب" },
-    { "id": "madrasa", "name": "Madrasa Department", "urduName": "شعبہ مدارس" },
-    { "id": "courses", "name": "Courses Department", "urduName": "شعبہ کورس" },
-    { "id": "children", "name": "Children's Organization", "urduName": "شعبہ تنظیم اطفال" },
-    { "id": "dawah", "name": "Dawah Department", "urduName": "شعبہ دعوت" },
-    { "id": "publications", "name": "Publications Department", "urduName": "شعبہ نشرواشاعت" },
-    { "id": "examination", "name": "Examination Department", "urduName": "شعبہ امتحان" },
-    { "id": "financial", "name": "Financial Support", "urduName": "شعبہ تعاون مالی" }
+    { "id": "maktab", "name": "شعبہ مکاتب" },
+    { "id": "madrasa", "name": "شعبہ مدارس" },
+    { "id": "courses", "name": "شعبہ کورس" },
+    { "id": "children", "name": "شعبہ تنظیم اطفال" },
+    { "id": "dawah", "name": "شعبہ دعوت" },
+    { "id": "publications", "name": "شعبہ نشرواشاعت" },
+    { "id": "examination", "name": "شعبہ امتحان" },
+    { "id": "financial", "name": "شعبہ تعاون مالی" }
   ]
 }

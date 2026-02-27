@@ -3,8 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import contactData from '../../content/en/contact.json';
+import contactDataUr from '../../content/ur/contact.json';
 
-const { title, urduTitle, description, urduDescription, addressLabel, urduAddressLabel, address, emailLabel, urduEmailLabel, email, websiteLabel, urduWebsiteLabel, website, hoursLabel, urduHoursLabel, hours, urduHours, fridayClosed, urduFridayClosed, phonesLabel, urduPhonesLabel, phones, mapLink, whatsappTitle, urduWhatsappTitle, whatsappText, urduWhatsappText, whatsappButton, urduWhatsappButton, whatsappNumber } = contactData;
+const { title, description, addressLabel, address, emailLabel, email, websiteLabel, website, hoursLabel, hours, fridayClosed, phonesLabel, phones, mapLink, whatsappTitle, whatsappText, whatsappButton, whatsappNumber } = contactData;
 ---
 
 <Layout 
@@ -20,9 +21,9 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h1 class="text-4xl lg:text-5xl font-bold mb-4">{title}</h1>
-          <p class="text-2xl font-urdu text-gold mb-4">{urduTitle}</p>
+          <p class="text-2xl font-urdu text-gold mb-4">{contactDataUr.title}</p>
           <p class="text-lg text-white/90 max-w-2xl mx-auto">{description}</p>
-          <p class="font-urdu text-white/80 mt-2">{urduDescription}</p>
+          <p class="font-urdu text-white/80 mt-2">{contactDataUr.description}</p>
         </div>
       </div>
     </section>
@@ -35,29 +36,29 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
           <div class="space-y-6">
             <div class="bg-cream rounded-xl p-6">
               <h3 class="font-semibold text-primary mb-1">{addressLabel}</h3>
-              <p class="text-sm font-urdu text-primary mb-2">{urduAddressLabel}</p>
+              <p class="text-sm font-urdu text-primary mb-2">{contactDataUr.addressLabel}</p>
               <p class="text-gray-700">{address}</p>
             </div>
             
             <div class="bg-cream rounded-xl p-6">
               <h3 class="font-semibold text-primary mb-1">{emailLabel}</h3>
-              <p class="text-sm font-urdu text-primary mb-2">{urduEmailLabel}</p>
+              <p class="text-sm font-urdu text-primary mb-2">{contactDataUr.emailLabel}</p>
               <a href={`mailto:${email}`} class="text-primary hover:underline">{email}</a>
             </div>
             
             <div class="bg-cream rounded-xl p-6">
               <h3 class="font-semibold text-primary mb-1">{websiteLabel}</h3>
-              <p class="text-sm font-urdu text-primary mb-2">{urduWebsiteLabel}</p>
+              <p class="text-sm font-urdu text-primary mb-2">{contactDataUr.websiteLabel}</p>
               <a href={`https://${website}`} class="text-primary hover:underline">{website}</a>
             </div>
             
             <div class="bg-cream rounded-xl p-6">
               <h3 class="font-semibold text-primary mb-1">{hoursLabel}</h3>
-              <p class="text-sm font-urdu text-primary mb-2">{urduHoursLabel}</p>
+              <p class="text-sm font-urdu text-primary mb-2">{contactDataUr.hoursLabel}</p>
               <p class="text-gray-700">{hours}</p>
-              <p class="text-gray-500 font-urdu mt-1">{urduHours}</p>
+              <p class="text-gray-500 font-urdu mt-1">{contactDataUr.hours}</p>
               <p class="text-red-600 text-sm mt-2">{fridayClosed}</p>
-              <p class="text-red-500 text-sm font-urdu">{urduFridayClosed}</p>
+              <p class="text-red-500 text-sm font-urdu">{contactDataUr.fridayClosed}</p>
             </div>
           </div>
           
@@ -66,7 +67,7 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
             <!-- Map -->
             <div class="bg-cream rounded-xl p-6">
               <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4">
-                <img src="/map.jpg" alt="Location Map" class="w-full h-full object-cover rounded-lg" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'text-gray-400\\'>Map Placeholder</span>';" />
+                <span class="text-gray-500">Map loading...</span>
               </div>
               <a 
                 href={mapLink}
@@ -81,7 +82,7 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
             <!-- Phone Numbers -->
             <div class="bg-cream rounded-xl p-6">
               <h3 class="font-semibold text-primary mb-1">{phonesLabel}</h3>
-              <p class="text-sm font-urdu text-primary mb-4">{urduPhonesLabel}</p>
+              <p class="text-sm font-urdu text-primary mb-4">{contactDataUr.phonesLabel}</p>
               <div class="space-y-3">
                 {phones.map(phone => (
                   <a 
@@ -105,9 +106,9 @@ const { title, urduTitle, description, urduDescription, addressLabel, urduAddres
         <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-8 md:p-12 text-white text-center">
           <div class="text-5xl mb-4">💬</div>
           <h2 class="text-3xl font-bold mb-2">{whatsappTitle}</h2>
-          <p class="text-xl font-urdu mb-4 text-green-200">{urduWhatsappTitle}</p>
+          <p class="text-xl font-urdu mb-4 text-green-200">{contactDataUr.whatsappTitle}</p>
           <p class="text-white/90 mb-4">{whatsappText}</p>
-          <p class="font-urdu text-white/80 mb-8">{urduWhatsappText}</p>
+          <p class="font-urdu text-white/80 mb-8">{contactDataUr.whatsappText}</p>
           <a 
             href={`https://wa.me/${whatsappNumber}`}
             target="_blank"

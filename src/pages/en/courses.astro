@@ -3,8 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import coursesData from '../../content/en/courses.json';
+import coursesDataUr from '../../content/ur/courses.json';
 
-const { featuredCourse, courseSubjects, trainingTitle, urduTrainingTitle, trainingDescription, urduTrainingDescription, trainingTopics, trainingIncludes } = coursesData;
+const { featuredCourse, courseSubjects, trainingTitle, trainingDescription, trainingTopics, trainingIncludes } = coursesData;
 ---
 
 <Layout 
@@ -35,19 +36,19 @@ const { featuredCourse, courseSubjects, trainingTitle, urduTrainingTitle, traini
                 {featuredCourse.badge}
               </span>
               <h2 class="text-3xl md:text-4xl font-bold mb-2">{featuredCourse.name}</h2>
-              <p class="text-xl font-urdu text-gold mb-6">{featuredCourse.urduName}</p>
+              <p class="text-xl font-urdu text-gold mb-6">{coursesDataUr.featuredCourse.name}</p>
               <p class="text-white/90 mb-6">{featuredCourse.description}</p>
-              <p class="font-urdu text-white/80 leading-loose">{featuredCourse.urduDescription}</p>
+              <p class="font-urdu text-white/80 leading-loose">{coursesDataUr.featuredCourse.description}</p>
               
               <div class="flex gap-6 mt-8">
                 <div>
                   <div class="text-3xl font-bold text-gold">{featuredCourse.duration}</div>
-                  <div class="text-sm text-white/70">{featuredCourse.urduDuration}</div>
+                  <div class="text-sm text-white/70">{coursesDataUr.featuredCourse.duration}</div>
                 </div>
                 <div class="w-px bg-white/20"></div>
                 <div>
                   <div class="text-3xl font-bold text-gold">{featuredCourse.subjectsCount}</div>
-                  <div class="text-sm text-white/70">{featuredCourse.urduSubjectsCount}</div>
+                  <div class="text-sm text-white/70">{coursesDataUr.featuredCourse.subjectsCount}</div>
                 </div>
               </div>
             </div>
@@ -71,7 +72,7 @@ const { featuredCourse, courseSubjects, trainingTitle, urduTrainingTitle, traini
                 <span class="text-primary font-bold">{index + 1}</span>
               </div>
               <h3 class="font-semibold text-primary mb-1">{subject.name}</h3>
-              <p class="text-sm font-urdu text-gray-600">{subject.urduName}</p>
+              <p class="text-sm font-urdu text-gray-600">{coursesDataUr.courseSubjects[index].name}</p>
             </div>
           ))}
         </div>
@@ -84,19 +85,19 @@ const { featuredCourse, courseSubjects, trainingTitle, urduTrainingTitle, traini
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 class="text-3xl font-bold text-primary mb-2">{trainingTitle}</h2>
-            <p class="text-xl font-urdu text-gray-600 mb-6">{urduTrainingTitle}</p>
+            <p class="text-xl font-urdu text-gray-600 mb-6">{coursesDataUr.trainingTitle}</p>
             <p class="text-gray-600 mb-6">{trainingDescription}</p>
-            <p class="text-gray-500 font-urdu leading-loose">{urduTrainingDescription}</p>
+            <p class="text-gray-500 font-urdu leading-loose">{coursesDataUr.trainingDescription}</p>
           </div>
           
           <div class="space-y-6">
             <div>
               <h3 class="font-semibold text-primary mb-4">Training Topics</h3>
               <div class="grid grid-cols-2 gap-3">
-                {trainingTopics.map(topic => (
+                {trainingTopics.map((topic, index) => (
                   <div class="bg-cream rounded-lg p-3">
                     <div class="font-medium text-sm">{topic.name}</div>
-                    <div class="text-xs font-urdu text-gray-500">{topic.urduName}</div>
+                    <div class="text-xs font-urdu text-gray-500">{coursesDataUr.trainingTopics[index].name}</div>
                   </div>
                 ))}
               </div>
@@ -105,12 +106,12 @@ const { featuredCourse, courseSubjects, trainingTitle, urduTrainingTitle, traini
             <div>
               <h3 class="font-semibold text-primary mb-4">Training Includes</h3>
               <ul class="space-y-2">
-                {trainingIncludes.map(item => (
+                {trainingIncludes.map((item, index) => (
                   <li class="flex items-start gap-2">
                     <span class="text-gold">✓</span>
                     <div>
                       <span class="text-sm text-gray-600">{item.text}</span>
-                      <span class="block text-xs font-urdu text-gray-500">{item.urduText}</span>
+                      <span class="block text-xs font-urdu text-gray-500">{coursesDataUr.trainingIncludes[index].text}</span>
                     </div>
                   </li>
                 ))}
