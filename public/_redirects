@@ -1,1 +1,9 @@
+# Cloudflare Pages redirect rules
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Language-specific SPA fallbacks - redirect all paths to their respective language index
+/en/* /en/index.html 200
+/ur/* /ur/index.html 200
+
+# Root path fallback (for any unmatched routes)
 /* /index.html 200
